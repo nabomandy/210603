@@ -22,7 +22,7 @@
 	<mvc:view-controller path="/hotel/registForm" view-name="hotel/registForm" />
 	<mvc:view-controller path="/clinic/registForm" view-name="clinic/registForm" />
 	
-
+	 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/view/" />
