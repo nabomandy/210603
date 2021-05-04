@@ -25,6 +25,7 @@ public class ReserveHotelController {
 		return "/reserveHotel/reserveForm";
 	}
 
+	
 	@RequestMapping("/reserve")
 	public String reserve(ReserveHotel reserveHotel, Model model) {
 		String msg = "예약을 실패하였습니다.";
