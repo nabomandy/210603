@@ -35,6 +35,7 @@ public class ClinicController {
 		return "/alert";
 	}
 
+	
 	@RequestMapping("/deleteForm")
 	public String deleteForm(int c_num, Model model) {
 		model.addAttribute("c_num",c_num);
