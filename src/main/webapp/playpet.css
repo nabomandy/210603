@@ -1,0 +1,512 @@
+/* header {
+    display: flex;
+    background-color: green;
+    top: 0;
+    left: 0;
+  } */
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #ff6e61bd;
+  --accent-color: #d49466;
+}
+
+* {
+  /* Tells the browser to account for any border and 
+    padding in the values you specify for an element's 
+    width and height. */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Nav container */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: var(--background-color);
+}
+
+/* Logo with text */
+
+.navbar__logo {
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.navbar__logo i {
+  color: var(--accent-color);
+}
+
+/* Menu */
+
+.navbar__menu {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+.navbar__menu li {
+  padding: 8px 12px;
+}
+
+.navbar__menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.navbar__icons {
+  list-style: none;
+  color: var(--text-color);
+  display: flex;
+  padding-left: 0;
+}
+
+/* Icons */
+
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+/* Toggle button */
+
+.navbar__toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--accent-color);
+}
+
+/* For small screen */
+
+@media screen and (max-width: 768px) {
+  /* Nav container */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  /* Menu */
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar__menu a {
+    /* Fill in an entire line so that user can click on any space */
+    display: block;
+  }
+  /* Icons */
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  /* Toggle button */
+  .navbar__toggleBtn {
+    display: block;
+  }
+  /* When toggle button is clicked - active state */
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+}
+/* .navbar{
+   display; flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #263343;
+   padding: 8px 12px;
+}
+
+.navbar_logo {
+   font-size: 24px;
+   color: white;
+}
+
+.navbar_logo i {
+   color: #d49466;
+}
+
+.navbar_menu {
+   display: flex;
+   list-style: 0;
+   padding-left: 0;
+}
+
+.navbar_menu li {
+   padding: 8px 12px;
+}
+
+.navbar_icons {
+   list-style: none;
+   color: white;
+   display: flex;
+}
+
+.navbar_icons li {
+   padding: 8px 12px;
+}
+
+.navbar_toogleBtn {
+   position: absolute;
+   right: 32px;
+   font-size: 24px;
+   color: #d49466;
+   display: block;
+}
+
+@media screen and (max-width: 786px) {
+   .navbar {
+       flex-direction: dolumn;
+       align-items: flex-start;
+   }
+
+   .navbar_menu {
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+   }
+  
+   .navbar_menu li {
+       width: 100%;
+       text-align: center;
+       padding: 8px 12px;
+   }
+
+   .navbar_menu li:hover{
+       background-color: #d49466;
+       border-radius: 4px;
+   }
+
+   .navbar_icons {
+       list-style: none;
+       color: white;
+       display: flex;
+       padding-left: 0;
+   }
+
+   .navbar_icons li {
+       padding: 8px 12px;
+   }
+ .navbar_menu.active,
+ .navbar_icons.active {
+   display: flex;
+ }
+} */
+
+/* 카페부분 영역 */
+.cafe,
+.playground {
+  /* width: 50%; */
+  width: 100%;
+  height: 300px;
+}
+.aaa {
+  font-size: 30px;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.cafecon {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+}
+/*화면 섹션 절반으로 나눔 */
+/* div {
+    width: 100%;
+    height: 300px;
+    
+    
+} */
+section.left {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+section.right {
+  width: 50%;
+  float: right;
+  box-sizing: border-box;
+}
+
+/*banner */
+#banner {
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-image: url("/pp.jpg");
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 6em 0 2em 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 0 !important;
+  cursor: default;
+  height: 60vh;
+  margin-bottom: -3.25em;
+  max-height: 20em;
+  min-height: 12em;
+  position: relative;
+  top: -3.25em;
+}
+
+#banner h1 {
+  font-size: 3.25em;
+  padding-bottom: 10px;
+}
+/* .major {
+    
+    height: 200px;
+    text-align: center;
+   line-height: 125px;
+}
+.content.p {
+    height: 200px;
+    text-align: center;
+    line-height: 125px;
+} */
+#banner > .inner {
+  -moz-transition: opacity 1.5s ease, -moz-transform 0.5s ease-out,
+    -moz-filter 0.5s ease, -webkit-filter 0.5s ease;
+  -webkit-transition: opacity 1.5s ease, -webkit-transform 0.5s ease-out,
+    -webkit-filter 0.5s ease, -webkit-filter 0.5s ease;
+  -ms-transition: opacity 1.5s ease, -ms-transform 0.5s ease-out,
+    -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
+  transition: opacity 1.5s ease, transform 0.5s ease-out, filter 0.5s ease,
+    -webkit-filter 0.5s ease;
+  padding: 5% !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* #banner > .inner .image {
+    display: none;
+  } */
+
+/* #banner > .inner header {
+    width: auto;
+  } */
+/* #banner > .inner header > :first-child {
+    width: auto;
+  }
+  #banner > .inner header > :first-child:after {
+    max-width: 100%;
+  } */
+
+#banner > .inner .content {
+  display: flex;
+  align-items: center;
+  margin: 0 0 2em 0;
+}
+
+/*=========살리던가 걍 지워버리던가=============*/
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "montserrat";
+  /* text-align: center; */
+}
+.body {
+  background: green;
+}
+.sectopm.header {
+  text-align: center;
+}
+.name {
+  width: 100%;
+}
+.card {
+  width: 50%;
+  background: none;
+  position: relative;
+  /* top: 50%;
+     left: 50%; */
+  /* transform: translate(-50%,-50%); //레이어 중앙정렬 */
+}
+/* .top-section{
+     height: 310px;
+     overflow: hidden;
+     background: blue;
+     position: relative;
+ } */
+#image-container {
+  width: 360px;
+  height: 240px;
+  padding: 3%;
+}
+.nav {
+  text-align: center;
+}
+.nav {
+  test-align: center;
+}
+.nav img {
+  width: 80px;
+  height: 50px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.nav img:hover {
+  border-color: indigo;
+}
+.prirce {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #d49466;
+  font-size: 24px;
+}
+.product-info {
+  padding: 24px;
+}
+.name {
+  width: 300px;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+.dis {
+  font-size: 16px;
+  opacity: 0.7;
+  width: 300px;
+  text-align: center;
+}
+.btn {
+  display: block;
+  background: #ff6e61bd;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  transition: 0.3s;
+  width: 300px;
+}
+.btn:hover {
+  background: #ffa0978a;
+}
+
+/*======================*/
+
+/* Footer */
+/* 
+#footer .copyright {
+    font-size: 0.8em;
+    list-style: none;
+    padding-left: 0;
+}
+
+#footer .copyright li {
+    border-left: solid 1px rgba(212, 212, 255, 0.1);
+    color: rgba(244, 244, 255, 0.2);
+    display: inline-block;
+    line-height: 1;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+#footer .copyright li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+@media screen and (max-width: 480px) {
+    #footer .copyright li {
+        display: block;
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+        line-height: inherit;
+    }
+} */
+/* playpetinfo 페이지 */
+/*사진 */
+/* .item1 {
+  background-color: blue;
+}
+
+.item2 {
+  background-color: aqua;
+}
+
+.item3 {
+  background-color: palevioletred;
+}
+
+.item4 {
+  background-color: blueviolet;
+}
+
+.item5 {
+  background-color: brown;
+}
+
+.item6 {
+  background-color: red;
+} */
+
+.container {
+  display: flex;
+  margin: 7%;
+  align-content: center;
+  justify-content: center;
+}
+
+/* 정보 텍스트 */
+
+.info {
+  display: flex;
+  /* text-align: left; */
+  /* align-content: flex-start; */
+  justify-content: center;
+  margin: 7%;
+  font-size: 20px;
+  line-height: 180%; /*수정*/
+}
+
+.map {
+  background-color: red;
+  padding: 15%;
+  margin: 7%;
+}
+.public {
+  margin: 6%;
+  line-height: 170%; /*수정*/
+}
+.loc {
+  display: flex;
+}
+ul {
+  list-style: none;
+}

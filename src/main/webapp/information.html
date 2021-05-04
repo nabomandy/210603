@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Landing - Forty by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+    <!-- 드롭다운 css -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Style the side navigation */
+        
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: static;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: white;
+            overflow-x: hidden;
+        }
+        /* Side navigation links */
+        
+        .sidenav a {
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+            display: block;
+        }
+        /* Change color on hover */
+        
+        .sidenav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        /* Style the content */
+        
+        .content {
+            margin-left: 200px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <!-- Note: The "styleN" class below should match that of the banner element. -->
+        <header id="header" class="alt style2">
+            <a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a
+        >
+        <nav>
+          <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="landing.html">Landing</a></li>
+                <li><a href="generic.html">Generic</a></li>
+                <li><a href="elements.html">Elements</a></li>
+            </ul>
+            <ul class="actions stacked">
+                <li><a href="#" class="button primary fit">Get Started</a></li>
+                <li><a href="#" class="button fit">Log In</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner -->
+        <!-- Note: The "styleN" class below should match that of the header element. -->
+        <section id="banner" class="style2">
+            <div class="inner">
+                <span class="image"> <img src="images/pic07.jpg" alt="" /> </span>
+                <header class="major">
+                    <h1>병원 예약 리스트</h1>
+                </header>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet nullam consequat<br /> sed veroeros. tempus adipiscing nulla.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main -->
+
+        <div class="content">
+            <h2>솔 동물병원 의료센터</h2>
+            <div class="row">
+                <div class="col-6 col-12-small">
+                    <img src="images/pic08.jpg" alt="" data-position="center center" />
+                </div>
+                <div class="col-6 col-12-small">
+                    <div id="map" style="width: 600px; height: 400px"></div>
+                </div>
+            </div>
+            <ul>
+                <li>경기 군포시 고산로 529 금강2단지주상복합아파트 상가 1층</li>
+                <li>031-345-4500</li>
+                <li>반려동물 가능</li>
+                <li>00:00 ~ 24:00</li>
+                <li>주차 가능</li>
+                <li>예약 가능</li>
+            </ul>
+
+            <ul class="actions">
+                <li><a href="reservation2.html" class="button">예약하기</a></li>
+                <li><a class="button">문의</a></li>
+            </ul>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Item1</td>
+                            <td>Ante turpis integer aliquet porttitor.</td>
+                            <td>29.99</td>
+                        </tr>
+                        <tr>
+                            <td>Item2</td>
+                            <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                            <td>19.99</td>
+                        </tr>
+                        <tr>
+                            <td>Item3</td>
+                            <td>Morbi faucibus arcu accumsan lorem.</td>
+                            <td>29.99</td>
+                        </tr>
+                        <tr>
+                            <td>Item4</td>
+                            <td>Vitae integer tempus condimentum.</td>
+                            <td>19.99</td>
+                        </tr>
+                        <tr>
+                            <td>Item5</td>
+                            <td>Ante turpis integer aliquet porttitor.</td>
+                            <td>29.99</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>100.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <!--지도-->
+
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9ce7b45f5d2c8595e8ff85665c67a774"></script>
+        <script>
+            var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+                mapOption = {
+                    center: new kakao.maps.LatLng(
+                        37.360748560676114,
+                        126.92262851481581
+                    ), // 지도의 중심좌표
+                    draggable: false,
+                    level: 3,
+                    // 지도의 확대 레벨
+                };
+
+            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+            // 마커가 표시될 위치입니다
+            var markerPosition = new kakao.maps.LatLng(
+                37.360748560676114,
+                126.92262851481581
+            );
+
+            // 마커를 생성합니다
+            var marker = new kakao.maps.Marker({
+                position: markerPosition,
+            });
+
+            // 마커가 지도 위에 표시되도록 설정합니다
+            marker.setMap(map);
+        </script>
+
+        <!-- 지도끝 -->
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li>
+                        <a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands alt fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands alt fa-instagram"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands alt fa-linkedin-in"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Untitled</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
